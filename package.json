@@ -1,0 +1,32 @@
+{
+  "author": "Luis Martins",
+  "name": "AngularJSGetStarted",
+  "version": "0.1.0",
+  "dependencies": {},
+  "devDependencies": {
+    "angular": "^1.2.19",
+    "browser-sync": "^1.3.0",
+    "component-webpack-plugin": "^0.2.1",
+    "css-loader": "^0.7.0",
+    "gulp": "^3.8.6",
+    "gulp-autoprefixer": "0.0.8",
+    "gulp-changed": "^0.4.0",
+    "gulp-component": "^0.1.8",
+    "gulp-concat": "^2.3.3",
+    "gulp-connect": "^2.0.6",
+    "gulp-filter": "^0.5.0",
+    "gulp-load-plugins": "^0.5.3",
+    "gulp-notify": "^1.4.0",
+    "gulp-plumber": "^0.6.3",
+    "gulp-sass": "^0.7.2",
+    "gulp-uglify": "^0.3.1",
+    "gulp-util": "^3.0.0",
+    "gulp-watch": "^0.6.8",
+    "html-loader": "^0.2.2",
+    "script-loader": "^0.5.2",
+    "webpack": "^1.3.2-beta2"
+  },
+  "browser": {
+    "jquery": "./app/assets/js/lib/jquery"
+  }
+}

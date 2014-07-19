@@ -1,0 +1,20 @@
+body{
+  font-family: "Proxima Nova", Helvetica, Arial;
+  margin: 0;
+}
+
+.Page{
+  width: 90%;
+  margin: 0 auto;
+  background: #eee;
+  padding: 1em;
+}
+
+
+.List-search{
+  background: hsla(0, 0%, 99%, 1);
+  border-bottom: 1px solid hsla(0, 0%, 88%, 1);
+  padding: 1em;
+  border-radius: 0.3em;
+  margin-bottom: 1.5em;
+}
