@@ -1,4 +1,5 @@
 (function(){
+  'use strict';
 
   var github = function($http) {
 
@@ -42,6 +43,6 @@
   };
 
   var module = angular.module('githubViewer');
-  module.factory('githubService', github);
+  module.factory('githubService', ['$http', github]);
 
 }());

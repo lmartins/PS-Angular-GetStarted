@@ -127,8 +127,13 @@ gulp.task('set-env-prod', function() {
   webpackConfig.debug = false;
   webpackConfig.devtool = "";
   webpackConfig.plugins = [
-    new webpack.optimize.UglifyJsPlugin(),
-    new ComponentPlugin()
+    new webpack.optimize.UglifyJsPlugin({
+      mangle: false
+    }),
+    new ComponentPlugin(),
+    new webpack.ResolverPlugin(
+      new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
+    )
   ];
   webpackCompiler = webpack( webpackConfig );
 });
@@ -169,3 +174,4 @@ gulp.task('dev', ['set-env-dev', 'browser-sync', 'watch'] );
 gulp.task('prod', ['set-env-prod', 'browser-sync', 'watch'] );
 
 gulp.task('shipit', ['set-env-prod', 'webpack'] );
+gulp.task('server', ['browser-sync'] );

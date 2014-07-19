@@ -23,6 +23,6 @@
 
   };
 
-  module.controller('RepoController', RepoController );
+  module.controller('RepoController', ['$scope', '$routeParams', 'githubService', RepoController] );
 
 }());

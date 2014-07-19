@@ -25,6 +25,6 @@
 
   };
 
-  app.controller("UserController", UserController );
+  app.controller("UserController", ['$scope', 'githubService', '$routeParams', UserController] );
 
 }());

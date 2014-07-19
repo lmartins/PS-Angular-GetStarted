@@ -2,8 +2,9 @@
 
 (function() {
 
-  var app = angular.module('githubViewer');
+  'use strict';
 
+  var app = angular.module('githubViewer');
 
   var MainController = function(
     $scope,
@@ -39,12 +40,12 @@
     };
 
 
-    $scope.username = "angular";
+    $scope.username = 'angular';
     $scope.countdown = 5;
     startCountdown();
 
   };
 
-  app.controller("MainController", MainController );
+  app.controller('MainController', ['$scope', '$interval', '$location', MainController] );
 
 }());
