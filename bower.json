@@ -2,5 +2,7 @@
   "author": "Luis Martins",
   "name": "tuts",
   "version": "0.1.0",
-  "dependencies": {}
+  "dependencies": {
+    "angular-route": "~1.2.20"
+  }
 }

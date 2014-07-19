@@ -37,7 +37,7 @@ gulp.task('browser-sync', function() {
       baseDir: "./"
     },
     // proxy: "192.168.1.3:8000",
-    browser: "google chrome canary",
+    browser: "google chrome",
     online: true
   });
 });
@@ -115,7 +115,10 @@ var webpackConfig = {
 gulp.task('set-env-dev', function() {
   webpackConfig.plugins = [
     new webpack.BannerPlugin(info.name + '\n' + info.version + ':' + Date.now() + ' [development build]'),
-    new ComponentPlugin()
+    new ComponentPlugin(),
+    new webpack.ResolverPlugin(
+      new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
+    )
   ];
   webpackCompiler = webpack( webpackConfig );
 });
